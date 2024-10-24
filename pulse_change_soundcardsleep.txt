@@ -4,3 +4,4 @@
 sudo nano /usr/share/wireplumber/main.lua.d/50-alsa-config.lua
 
 #uncomment(remove the -- in the beginning) and change the following line --["session.suspend-timeout-seconds"] = 5,  -- 0 disables suspend to ["session.suspend-timeout-seconds"] = 0,  -- 0 disables suspend
+#and reboot
