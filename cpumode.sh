@@ -24,7 +24,7 @@ function getcpumode() { #{{{
 
 # set cpu mode
 function setcpumode() { #{{{
-    [ $1 != 'powersave' -a $1 != 'performance' ] && ee 'Invalid given value..'
+    [ $1 != 'powersave' -a $1 != 'performance' -a $1 != 'schedutil' ] && ee 'Invalid given value..'
     [ $(getcpumode) == $1 ] && ee "It's already in '$1' mode"
     echo $1 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 } #}}}
@@ -39,6 +39,7 @@ fi #}}}
 case "$1" in #{{{
     performance)    setcpumode performance; exit 0      ;;
     powersave)      setcpumode powersave; exit 0        ;;
+    schedutil)      setcpumode schedutil; exit 0        ;;
     current|get)    getcpumode; exit 0                  ;;
     help)           show_usage                          ;;
     *)              ee "Try: $0 help"                   ;;
