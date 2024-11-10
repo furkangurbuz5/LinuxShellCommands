@@ -6,7 +6,7 @@
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=0
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=0 reboot=bios shutdown=bios"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=0"
 GRUB_CMDLINE_LINUX=""
 
 # If your computer has multiple operating systems installed, then you
